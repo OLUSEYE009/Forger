@@ -38,13 +38,14 @@ export default function SkillsForm({ data, setData }: Props) {
           Add Skills
         </label>
         <form onSubmit={handleAddSkill} className="flex gap-2">
-          <Input
-            type="text"
-            value={newSkill}
-            onChange={(e) => setNewSkill(e.target.value)}
-            placeholder="e.g., Python"
-            className="flex-grow"
-          />
+          <div className="flex-grow">
+  <Input
+    type="text"
+    value={newSkill}
+    onChange={(e) => setNewSkill(e.target.value)}
+    placeholder="e.g., Python"
+  />
+</div>
           <button
             type="submit"
             className="flex-shrink-0 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md shadow-lg flex items-center"
