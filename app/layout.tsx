@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Forger - Build Your Portfolio in Minutes",
   description: "The easiest way to create a professional developer portfolio.",
+   verification: {
+    google: "JVEFaPn8Ty4WHoTUBirrJjebCIdK_6Pn6bnfWIqsVy8",
+  },
 };
 
 export default function RootLayout({
