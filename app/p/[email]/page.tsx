@@ -113,7 +113,7 @@ export default function PortfolioView() {
             <a 
               href={`mailto:${email}`} 
               className="p-3 text-gray-400 hover:text-white hover:bg-gray-800 rounded-full transition-all hover:scale-110"
-              title="Send Email"
+              title="Send Email."
             >
               <FiMail className="w-6 h-6" />
             </a>
@@ -121,7 +121,6 @@ export default function PortfolioView() {
         </div>
       </header>
       
-      {/* 💥 FIX APPLIED HERE: The gap-12 is now correctly placed within the main grid container. */}
       <main className="py-16">
         <div className={`max-w-5xl mx-auto px-6 ${isMinimalLayout ? 'space-y-16' : 'grid grid-cols-1 md:grid-cols-3 gap-12'}`}>
 
@@ -183,7 +182,7 @@ export default function PortfolioView() {
                     <div className="space-y-8 border-l border-gray-700 pl-4">
                         {data.experience.map((exp) => (
                             <div key={exp.id} className="relative">
-                                {/* Timeline Dot */}
+                          
                                 <div className={`absolute -left-5 top-0 w-3 h-3 rounded-full ${currentTheme.bg}`}></div>
                                 <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
                                 <p className="text-lg text-gray-300">{exp.company}</p>
@@ -200,7 +199,6 @@ export default function PortfolioView() {
                 <section>
                     <h2 className="text-3xl font-bold text-white mb-10">Featured Projects</h2>
                     
-                    {/* Project Grid: Uses 1 column for minimal, 2 columns for classic */}
                     <div className={`grid gap-8 ${isMinimalLayout ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2'}`}>
                         {data.projects.map((project) => (
                             <div 
@@ -235,7 +233,6 @@ export default function PortfolioView() {
                 </section>
             )}
 
-            {/* SKILLS & EDUCATION (Only shown in Minimal Layout - Full width) */}
             {isMinimalLayout && (
               <>
                   {data.skills.length > 0 && (
